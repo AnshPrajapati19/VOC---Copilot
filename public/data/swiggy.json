@@ -1,0 +1,378 @@
+{
+  "meta": {
+    "name": "Swiggy",
+    "description": "India's leading food delivery platform offering restaurant discovery, ordering, and hyperlocal delivery services.",
+    "totalReviews": 1243,
+    "dateRange": "Mar 2025 – Jun 2026",
+    "source": "Google Play Store"
+  },
+  "summary": {
+    "reviewsAnalyzed": 1243,
+    "painPointsIdentified": 31,
+    "churnRiskPercent": 29,
+    "mostMentionedIssue": "Late deliveries exceeding estimated time",
+    "topPainPoint": "Order cancellations after long wait",
+    "highestChurnDriver": "Refund denied for missing items",
+    "mostRequestedFeature": "Talk to a real human in support",
+    "estimatedTimeSaved": "9 hours",
+    "priorities": [
+      { "level": "P0", "label": "Fix Delivery Estimates" },
+      { "level": "P1", "label": "Improve Refund Process" },
+      { "level": "P2", "label": "Reduce Surge Pricing" }
+    ]
+  },
+  "clusters": [
+    {
+      "clusterId": "late-deliveries",
+      "label": "Late Deliveries & Wrong ETAs",
+      "reviewCount": 312,
+      "sentiment": "Negative",
+      "summary": "The most common complaint by volume. Users report deliveries arriving 20-60 minutes after the estimated time, with the ETA constantly increasing during the wait. Cold food on arrival is a frequent secondary complaint. The issue is worst during peak dinner hours and rainy weather.",
+      "reviews": [
+        "Ordered biryani at 8pm, estimated delivery 35 mins. It came at 9:25pm. Almost 90 minutes! The food was ice cold and the raita was completely separated. Paid ₹450 for garbage.",
+        "The ETA keeps changing every 5 minutes. First it said 30 mins, then 40, then 55. Just give me an honest estimate from the start instead of lying to keep me waiting!",
+        "Delivery partner picked up my food and then went to deliver someone else's order first. I could see on the map he was going in the opposite direction. My pizza arrived 45 mins late and soggy.",
+        "During rain, Swiggy delivery times become completely fictional. Ordered lunch at 12:30, got it at 2:15. By then my lunch break was over and I ate cold food at my desk.",
+        "I live 2km from the restaurant. Google Maps says 7 minutes by bike. Swiggy took 52 minutes to deliver. How is that even possible? Are the delivery partners walking?",
+        "Swiggy's 'lightning fast delivery' marketing is a complete joke. 3 out of 5 orders in the last month were delayed by 30+ minutes. Zomato is faster in my area."
+      ],
+      "aiSummary": "Late deliveries account for 25% of all negative reviews, making it the highest-volume complaint cluster. The issue is compounded by dynamically increasing ETAs that feel dishonest to users. Batching of orders (assigning multiple deliveries to one partner) is a key technical cause. Peak hour and weather-related delays need separate mitigation strategies.",
+      "representativeReview": "Ordered biryani at 8pm, estimated delivery 35 mins. It came at 9:25pm. Almost 90 minutes! The food was ice cold and the raita was completely separated. Paid ₹450 for garbage.",
+      "quotes": [
+        {
+          "text": "The ETA keeps changing every 5 minutes. First it said 30 mins, then 40, then 55. Just give me an honest estimate from the start.",
+          "rating": 2,
+          "reason": "Perfectly captures the user frustration with dynamically increasing ETAs that feel deceptive."
+        },
+        {
+          "text": "Delivery partner picked up my food and then went to deliver someone else's order first.",
+          "rating": 1,
+          "reason": "Exposes the order batching problem that directly causes delays visible to the tracking user."
+        },
+        {
+          "text": "Swiggy's 'lightning fast delivery' marketing is a complete joke.",
+          "rating": 1,
+          "reason": "Shows the gap between brand promise and actual experience, a critical brand perception issue."
+        },
+        {
+          "text": "I live 2km from the restaurant. Google Maps says 7 minutes by bike. Swiggy took 52 minutes.",
+          "rating": 1,
+          "reason": "Uses a concrete distance comparison to illustrate the absurdity of the delay."
+        }
+      ]
+    },
+    {
+      "clusterId": "order-cancellations",
+      "label": "Order Cancellations After Long Waits",
+      "reviewCount": 198,
+      "sentiment": "Very Negative",
+      "summary": "Users report orders being cancelled by the restaurant or Swiggy after 20-40 minutes of waiting, often without explanation. The cancellation frequently happens after the user has already rejected cooking at home or ordering elsewhere. Compensation offered is usually inadequate app credits.",
+      "reviews": [
+        "Waited 40 minutes for my order and then Swiggy cancelled it saying 'restaurant is too busy'. If they're too busy, why did you accept my order?! Now it's 9:30pm and I have nothing to eat.",
+        "Order cancelled after 35 minutes. Got ₹50 coupon as 'compensation'. My order was ₹380. What am I supposed to do with ₹50? This is insulting.",
+        "This is the 3rd time this month my order has been cancelled after waiting. Each time it's a different excuse - restaurant closed, no delivery partner, item unavailable. GET YOUR ACT TOGETHER.",
+        "Ordered for a house party. 8 people waiting for food. Order cancelled after 30 minutes because 'no delivery partner available'. Had to emergency order from Zomato. So embarrassing.",
+        "The worst part about cancellations is that by the time you reorder from somewhere else, it's too late. I've gone to bed hungry twice because of Swiggy cancellations."
+      ],
+      "aiSummary": "Order cancellations after extended wait times represent the most emotionally charged complaint cluster. The key issue is that cancellations occur after users have committed significant time and rejected alternative plans. The inadequate compensation (small coupons vs. actual order value) adds insult to injury. This pattern strongly correlates with app uninstalls.",
+      "representativeReview": "Waited 40 minutes for my order and then Swiggy cancelled it saying 'restaurant is too busy'. If they're too busy, why did you accept my order?! Now it's 9:30pm and I have nothing to eat.",
+      "quotes": [
+        {
+          "text": "Got ₹50 coupon as 'compensation'. My order was ₹380. What am I supposed to do with ₹50?",
+          "rating": 1,
+          "reason": "Quantifies the inadequacy of Swiggy's compensation model relative to the actual loss."
+        },
+        {
+          "text": "I've gone to bed hungry twice because of Swiggy cancellations.",
+          "rating": 1,
+          "reason": "The most emotionally impactful statement showing how cancellations affect basic needs."
+        },
+        {
+          "text": "If they're too busy, why did you accept my order?!",
+          "rating": 1,
+          "reason": "Points to the systemic issue of accepting orders without verifying restaurant capacity."
+        }
+      ]
+    },
+    {
+      "clusterId": "missing-items",
+      "label": "Missing Items & Wrong Orders",
+      "reviewCount": 176,
+      "sentiment": "Negative",
+      "summary": "Users frequently receive incomplete orders with missing items or entirely wrong dishes. The complaint process is frustrating, with many users reporting that Swiggy's AI-powered complaint system denies refunds by claiming the order was delivered correctly. Photo evidence is often dismissed.",
+      "reviews": [
+        "Ordered 2 butter naans, 1 dal makhani, 1 paneer tikka. Received 1 naan and the dal. No paneer tikka, one naan missing. Raised complaint - refund denied. DENIED! Even though items are clearly missing!",
+        "Got someone else's order entirely. I'm vegetarian and received a chicken biryani. When I complained, the bot said 'your order has been delivered successfully'. Yeah, someone else's order was delivered to ME.",
+        "Missing items complaint rejected 3 times in a row. I have photos of what I ordered vs what I received. But the automated system just says 'we have reviewed and cannot process your request'. There's no way to talk to a human!",
+        "Ordered a family meal for 4 with drinks. No drinks came. That's ₹160 worth of drinks missing. Swiggy's response? ₹30 coupon. Absolute joke.",
+        "The restaurant sealed the bag so the delivery partner couldn't have stolen anything. But half my order was missing. The restaurant clearly didn't pack it. And Swiggy takes zero responsibility."
+      ],
+      "aiSummary": "Missing items and wrong orders erode trust in the entire platform. The AI-powered complaint resolution system is particularly problematic — it frequently denies valid refund requests, creating a perception that Swiggy deliberately avoids accountability. The sealed bag policy, while preventing delivery partner tampering, makes it impossible to verify orders before acceptance.",
+      "representativeReview": "Ordered 2 butter naans, 1 dal makhani, 1 paneer tikka. Received 1 naan and the dal. No paneer tikka, one naan missing. Raised complaint - refund denied. DENIED! Even though items are clearly missing!",
+      "quotes": [
+        {
+          "text": "Got someone else's order entirely. I'm vegetarian and received a chicken biryani.",
+          "rating": 1,
+          "reason": "Highlights the severity when wrong orders violate dietary restrictions — both frustrating and culturally sensitive."
+        },
+        {
+          "text": "The automated system just says 'we have reviewed and cannot process your request'. There's no way to talk to a human!",
+          "rating": 1,
+          "reason": "Captures the helplessness of dealing with an automated system that denies valid complaints."
+        },
+        {
+          "text": "Swiggy takes zero responsibility.",
+          "rating": 1,
+          "reason": "Concise expression of the core trust issue — perceived lack of accountability."
+        }
+      ]
+    },
+    {
+      "clusterId": "refund-issues",
+      "label": "Refund Denials & Poor Compensation",
+      "reviewCount": 158,
+      "sentiment": "Very Negative",
+      "summary": "Users consistently report that refunds are denied by Swiggy's automated system even for legitimate complaints. When refunds are approved, they're often issued as app credits instead of money. The lack of human support agents makes escalation nearly impossible.",
+      "reviews": [
+        "I've spent over ₹2 lakhs on Swiggy in the past year. One ₹350 refund request for spoiled food and they deny it? This is how you treat loyal customers? Uninstalling right now.",
+        "Refund denied for cold food that arrived 50 minutes late. Their reason: 'delivery was completed within acceptable time'. 50 MINUTES is acceptable?! By what standard?",
+        "Every refund I've ever gotten is in Swiggy credits. I don't want credits, I want my money back. You can't force me to order again from a platform that keeps messing up.",
+        "Tried escalating a denied refund 5 times. Each time the chatbot takes me in circles. There is literally NO way to reach a human agent. It's designed to exhaust you into giving up.",
+        "They gave me a ₹75 refund for a ₹520 order where 3 items were missing. When I complained again, they said the 'case is closed'. This is theft."
+      ],
+      "aiSummary": "The refund experience is the strongest churn predictor in the entire dataset. Swiggy's automated refund system appears to be optimized for cost savings rather than customer satisfaction, creating a perception of institutional dishonesty. High-value loyal customers are particularly sensitive to refund denials because they feel their loyalty should earn them trust. The inability to reach human support is the most frequently mentioned aggravating factor.",
+      "representativeReview": "I've spent over ₹2 lakhs on Swiggy in the past year. One ₹350 refund request for spoiled food and they deny it? This is how you treat loyal customers? Uninstalling right now.",
+      "quotes": [
+        {
+          "text": "I've spent over ₹2 lakhs on Swiggy in the past year. One ₹350 refund request and they deny it?",
+          "rating": 1,
+          "reason": "Shows how refund denials disproportionately alienate high-LTV customers."
+        },
+        {
+          "text": "It's designed to exhaust you into giving up.",
+          "rating": 1,
+          "reason": "Reveals user perception that the support system is intentionally obstructive."
+        },
+        {
+          "text": "They gave me a ₹75 refund for a ₹520 order where 3 items were missing. This is theft.",
+          "rating": 1,
+          "reason": "Quantifies the gap between expected and received compensation with strong emotional language."
+        },
+        {
+          "text": "You can't force me to order again from a platform that keeps messing up.",
+          "rating": 1,
+          "reason": "Directly addresses the problematic credit-only refund policy that traps users."
+        }
+      ]
+    },
+    {
+      "clusterId": "surge-pricing",
+      "label": "Surge Pricing & Hidden Charges",
+      "reviewCount": 187,
+      "sentiment": "Negative",
+      "summary": "Users are frustrated by excessive surge pricing during peak hours and bad weather. Many report that the same order costs 40-80% more compared to ordering directly from the restaurant. Hidden charges including 'platform fee', 'small order fee', and 'rain surge' add up to make the service unaffordable.",
+      "reviews": [
+        "A plate of momos costs ₹120 at the shop. On Swiggy it's ₹180 + ₹35 delivery + ₹10 platform fee + ₹15 packaging. That's ₹240 for ₹120 momos. DOUBLE the price! Who's getting robbed here?",
+        "Rain starts and suddenly delivery fee goes from ₹25 to ₹80. You're literally profiting from bad weather. People order MORE during rain because they can't go out. This is exploitation.",
+        "Small order fee of ₹30 is ridiculous. I just want one coffee for ₹150. Why should I pay ₹30 extra for ordering 'too little'? I'll just walk to the cafe myself.",
+        "Swiggy One membership used to be worth it. Now even with membership, there are surge charges and the 'free delivery' has a minimum order of ₹199. What am I paying for?",
+        "Compared prices with calling the restaurant directly - Swiggy marks up menu items by 15-25% AND charges delivery. I feel cheated every time I use this app."
+      ],
+      "aiSummary": "Pricing transparency is a growing concern that threatens Swiggy's value proposition for price-sensitive Indian consumers. The cumulative effect of menu markups, delivery fees, platform fees, packaging charges, and surge pricing makes Swiggy significantly more expensive than direct ordering. Swiggy One members are particularly frustrated because they expect membership to shield them from these charges. This cluster drives gradual churn as users discover cheaper alternatives.",
+      "representativeReview": "A plate of momos costs ₹120 at the shop. On Swiggy it's ₹180 + ₹35 delivery + ₹10 platform fee + ₹15 packaging. That's ₹240 for ₹120 momos. DOUBLE the price! Who's getting robbed here?",
+      "quotes": [
+        {
+          "text": "A plate of momos costs ₹120 at the shop. On Swiggy it's ₹240. DOUBLE the price!",
+          "rating": 2,
+          "reason": "Concrete price comparison that makes the cost differential immediately tangible."
+        },
+        {
+          "text": "You're literally profiting from bad weather. This is exploitation.",
+          "rating": 1,
+          "reason": "Frames surge pricing as morally objectionable, indicating potential PR risk."
+        },
+        {
+          "text": "Swiggy One membership used to be worth it. Now even with membership, there are surge charges.",
+          "rating": 2,
+          "reason": "Shows erosion of the premium membership value proposition."
+        }
+      ]
+    },
+    {
+      "clusterId": "support-bots",
+      "label": "Unhelpful Chatbot Support",
+      "reviewCount": 212,
+      "sentiment": "Very Negative",
+      "summary": "Swiggy's customer support is almost entirely automated via chatbots. Users report being unable to reach human agents for complex issues. The bot provides scripted responses that don't address specific complaints. Many users give up on getting resolution, leading to silent churn.",
+      "reviews": [
+        "I just want to talk to a real person. Is that too much to ask? The chatbot keeps sending me canned responses that have nothing to do with my actual problem. I've been going in circles for 30 minutes.",
+        "The support bot asked me to 'describe my issue' 4 times. Each time I did, it gave me the same generic response. Then it said 'we're sorry for the inconvenience' and closed the chat. NOTHING WAS RESOLVED.",
+        "Called Swiggy's customer care number. Got redirected to the app chat. App chat is a useless bot. So basically there's zero customer support. For a company this big, that's shameful.",
+        "I tried to report a food safety issue - found a hair in my food. The bot said 'we have noted your feedback' and offered me a ₹50 coupon. A HAIR IN MY FOOD and they give me ₹50. I need to speak to a manager, not a bot.",
+        "The support system is designed to frustrate you until you give up. There's no escalation path, no phone support, no email. Just a bot that says sorry and closes the ticket. This is anti-consumer."
+      ],
+      "aiSummary": "The chatbot-only support system is the second most frequently mentioned pain point after late deliveries. While automation reduces support costs, it's creating a massive trust deficit. Users with legitimate grievances feel unheard and disrespected. The inability to escalate to human agents is particularly damaging for serious issues like food safety, dietary violations, and large refunds. This is a systemic issue that amplifies the negative impact of every other problem.",
+      "representativeReview": "I just want to talk to a real person. Is that too much to ask? The chatbot keeps sending me canned responses that have nothing to do with my actual problem. I've been going in circles for 30 minutes.",
+      "quotes": [
+        {
+          "text": "I just want to talk to a real person. Is that too much to ask?",
+          "rating": 1,
+          "reason": "Simple, universally relatable frustration that captures the core support failure."
+        },
+        {
+          "text": "The support system is designed to frustrate you until you give up.",
+          "rating": 1,
+          "reason": "Shows the user perception that poor support is intentional, not accidental."
+        },
+        {
+          "text": "Found a hair in my food. The bot said 'we have noted your feedback' and offered me a ₹50 coupon.",
+          "rating": 1,
+          "reason": "Illustrates how bot responses are wildly inappropriate for serious food safety issues."
+        },
+        {
+          "text": "Called Swiggy's customer care number. Got redirected to the app chat. App chat is a useless bot.",
+          "rating": 1,
+          "reason": "Shows the complete absence of alternative support channels."
+        }
+      ]
+    }
+  ],
+  "churnSignals": [
+    {
+      "review": "I've spent over ₹2 lakhs on Swiggy in the past year. One ₹350 refund request for spoiled food and they deny it? This is how you treat loyal customers? Uninstalling right now.",
+      "confidence": 0.96,
+      "reasoning": "High-LTV customer with explicit uninstall intent. The contrast between lifetime spend and a small denied refund makes this a textbook example of penny-wise, pound-foolish churn.",
+      "clusterId": "refund-issues"
+    },
+    {
+      "review": "This is the 3rd time this month my order has been cancelled after waiting. Each time it's a different excuse - restaurant closed, no delivery partner, item unavailable. GET YOUR ACT TOGETHER.",
+      "confidence": 0.88,
+      "reasoning": "Three cancellations in a single month indicates a severely degraded experience. The all-caps frustration and pattern of repeated failures suggest imminent churn.",
+      "clusterId": "order-cancellations"
+    },
+    {
+      "review": "Swiggy's 'lightning fast delivery' marketing is a complete joke. 3 out of 5 orders in the last month were delayed by 30+ minutes. Zomato is faster in my area.",
+      "confidence": 0.85,
+      "reasoning": "User has already compared Swiggy unfavorably with a named competitor and is experiencing a 60% delay rate. The specific comparison to Zomato suggests they're actively considering switching.",
+      "clusterId": "late-deliveries"
+    },
+    {
+      "review": "Compared prices with calling the restaurant directly - Swiggy marks up menu items by 15-25% AND charges delivery. I feel cheated every time I use this app.",
+      "confidence": 0.82,
+      "reasoning": "User has discovered the pricing markup and feels deceived. Once price awareness sets in, it's very difficult to retain price-sensitive users, especially in India.",
+      "clusterId": "surge-pricing"
+    },
+    {
+      "review": "The support system is designed to frustrate you until you give up. There's no escalation path, no phone support, no email. Just a bot that says sorry and closes the ticket. This is anti-consumer.",
+      "confidence": 0.80,
+      "reasoning": "User has given up on the support system entirely. The 'anti-consumer' framing suggests they may escalate to social media or consumer forums, amplifying negative sentiment.",
+      "clusterId": "support-bots"
+    },
+    {
+      "review": "Got someone else's order entirely. I'm vegetarian and received a chicken biryani. When I complained, the bot said 'your order has been delivered successfully'. Yeah, someone else's order was delivered to ME.",
+      "confidence": 0.87,
+      "reasoning": "A dietary restriction violation combined with a dismissive bot response creates both emotional distress and complete loss of trust in the complaint resolution system.",
+      "clusterId": "missing-items"
+    }
+  ],
+  "recommendations": [
+    {
+      "problem": "Delivery times consistently exceed estimated ETAs by 20-60 minutes during peak hours",
+      "evidence": "312 reviews about late deliveries. Dynamic ETA increases perceived as deceptive. Cold food complaints strongly correlated with delays >30 mins.",
+      "recommendation": "Implement honest ETA estimation that accounts for real-time traffic, weather, and kitchen load. Add 10-15% buffer to estimates rather than showing optimistic times. Introduce automatic discount triggers for orders delivered 20+ minutes late.",
+      "whyItMatters": "Late delivery is the #1 complaint by volume. Honest ETAs with occasional positive surprises (early delivery) create far better sentiment than optimistic ETAs with frequent disappointments.",
+      "expectedKPI": "Improve Retention",
+      "priority": "P0"
+    },
+    {
+      "problem": "Orders cancelled after 20-40 minutes of user wait time",
+      "evidence": "198 reviews about order cancellations. Cancellations happen after restaurant capacity exceeded or delivery partners unavailable. Compensation is inadequate (₹50 coupons for ₹400 orders).",
+      "recommendation": "Implement real-time restaurant capacity checks before accepting orders. Pre-assign delivery partners during checkout to prevent 'no partner available' cancellations. Offer full refund + 20% bonus credit for any order cancelled after 15 minutes.",
+      "whyItMatters": "Late cancellations leave users hungry and without alternatives. The emotional impact is disproportionate to the order value because it disrupts meal planning for individuals and families.",
+      "expectedKPI": "Reduce Churn",
+      "priority": "P0"
+    },
+    {
+      "problem": "Automated support system denies valid refund claims and blocks human escalation",
+      "evidence": "212 reviews about chatbot frustration. 158 reviews about refund denials. Combined, support failures are mentioned in 30% of all 1-star reviews.",
+      "recommendation": "Introduce a tiered support system: bot for simple queries, automatic human escalation for food safety, dietary violations, and refunds above ₹300. Show estimated human agent wait time. Allow callback requests.",
+      "whyItMatters": "The support bot amplifies every other problem. When things go wrong, bad support turns a recoverable complaint into permanent churn. Good service recovery can actually increase loyalty above pre-incident levels.",
+      "expectedKPI": "Reduce Churn",
+      "priority": "P1"
+    },
+    {
+      "problem": "Missing items and wrong orders with no adequate resolution",
+      "evidence": "176 reviews about missing/wrong items. AI-based complaint system rejects valid claims. Photo evidence is dismissed. Dietary violation incidents pose legal risk.",
+      "recommendation": "Implement photo-based claim verification with human review for orders above ₹200. Use delivery partner check-off lists for each item at pickup. Instant full refund for dietary restriction violations regardless of amount.",
+      "whyItMatters": "Missing items directly erode the fundamental trust that the platform will deliver what was ordered. Dietary violations (vegetarian receiving non-veg) carry cultural and religious sensitivity in India.",
+      "expectedKPI": "Improve Rating",
+      "priority": "P1"
+    },
+    {
+      "problem": "Excessive cumulative charges making Swiggy 40-80% more expensive than direct ordering",
+      "evidence": "187 reviews about pricing. Users itemize: menu markup + delivery fee + platform fee + packaging + surge. Swiggy One members report diminishing membership value.",
+      "recommendation": "Introduce transparent pricing breakdown showing restaurant price vs Swiggy price. Cap total fees at 25% of order value. Revamp Swiggy One to truly eliminate all fees with no hidden minimums.",
+      "whyItMatters": "Price sensitivity is extremely high in the Indian market. As users become aware of markups, they switch to direct ordering or competitors. The perception of hidden charges damages long-term brand trust.",
+      "expectedKPI": "Increase Revenue",
+      "priority": "P2"
+    },
+    {
+      "problem": "Food quality degradation due to delivery delays — cold, soggy, or separated food items",
+      "evidence": "Correlated with 312 late delivery reviews. Cold food mentioned in 41% of delay complaints. Specific items affected: biryani, pizza, ice cream, momos.",
+      "recommendation": "Partner with restaurants to implement better packaging for delivery (insulated bags for hot items, sealed containers for liquids). Prioritize speed for temperature-sensitive items. Display 'best ordered for nearby restaurants' tags for fragile items.",
+      "whyItMatters": "Food quality is the ultimate measure of the delivery experience. No amount of fast delivery matters if the food arrives in poor condition. Better packaging also reduces complaint and refund volumes.",
+      "expectedKPI": "Reduce Support Tickets",
+      "priority": "P2"
+    }
+  ],
+  "roadmap": {
+    "P0": [
+      {
+        "problem": "Delivery ETAs are consistently inaccurate, leading to user disappointment and cold food",
+        "recommendation": "Rebuild ETA model with honest estimates incorporating real-time kitchen load, traffic, and weather. Add automatic compensation for significant delays.",
+        "reasoning": "Delivery speed and predictability are the core value proposition. Accurate ETAs set proper expectations and reduce frustration even when deliveries are slow.",
+        "successMetric": "80% of orders delivered within +/- 5 minutes of estimated time. Reduce delay-related complaints by 50%.",
+        "businessImpact": "High"
+      },
+      {
+        "problem": "Orders accepted and then cancelled after 20-40 minutes of user wait time",
+        "recommendation": "Implement real-time restaurant capacity management and pre-assign delivery partners before order confirmation.",
+        "reasoning": "Cancellations after long waits have the highest emotional impact per incident. Preventing them eliminates the most viscerally negative user experiences.",
+        "successMetric": "Reduce post-acceptance cancellation rate from estimated 6% to under 1%. Zero cancellations after 20 minutes.",
+        "businessImpact": "High"
+      }
+    ],
+    "P1": [
+      {
+        "problem": "Automated support denies valid refund claims with no human escalation path",
+        "recommendation": "Implement tiered support with automatic human escalation for food safety issues, dietary violations, and high-value refunds.",
+        "reasoning": "Support quality determines whether a bad experience leads to churn or recovery. Human agents can save high-LTV customers that bots would lose.",
+        "successMetric": "Human escalation available within 5 minutes for qualifying issues. Increase refund approval rate for valid claims to 90%+.",
+        "businessImpact": "High"
+      },
+      {
+        "problem": "Missing items and wrong orders with AI system dismissing photo evidence",
+        "recommendation": "Human review for disputed claims above ₹200. Delivery partner item check-off at pickup. Instant refunds for dietary violations.",
+        "reasoning": "Order accuracy is a foundational expectation. When the complaint system fails on top of the order failure, it creates a compounding trust deficit.",
+        "successMetric": "Reduce missing item complaints by 40%. Resolve dietary violation complaints within 2 hours with full refund.",
+        "businessImpact": "Medium"
+      }
+    ],
+    "P2": [
+      {
+        "problem": "Cumulative fees and markups making platform 40-80% more expensive than direct ordering",
+        "recommendation": "Transparent pricing breakdown, fee caps at 25% of order value, and genuine value restoration for Swiggy One membership.",
+        "reasoning": "As food delivery becomes commoditized, price competitiveness becomes a key differentiator. Transparent pricing builds trust even if prices don't decrease.",
+        "successMetric": "Reduce pricing-related complaints by 30%. Increase Swiggy One renewal rate by 15%.",
+        "businessImpact": "Medium"
+      },
+      {
+        "problem": "Food quality degradation during delivery due to poor packaging and long transit times",
+        "recommendation": "Partner with restaurants on delivery-optimized packaging. Prioritize routing for temperature-sensitive items. Smart tagging for fragile orders.",
+        "reasoning": "Better food quality on arrival reduces complaints, refunds, and reorder reluctance. It's a cost-saving measure disguised as a quality improvement.",
+        "successMetric": "Reduce 'cold food' complaints by 50%. Increase reorder rate for temperature-sensitive cuisine categories by 20%.",
+        "businessImpact": "Low"
+      }
+    ]
+  }
+}
